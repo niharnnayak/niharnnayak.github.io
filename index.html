@@ -1,106 +1,228 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs
+<html class="h-100">
+    <head>
+        <title>Home | Chris Bryan</title>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="/assets/styles/font-awesome-4.7.0/css/font-awesome.css">
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    </head>
 
-</head>
-<body>
+    <body class="d-flex flex-column h-100">
+    
     <header>
-        <div class="container">
-            <h1>My Portfolio</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about" class="scroll-link">About</a></li>
-                    <li><a href="#experience" class="scroll-link">Experience</a></li>
-                    <li><a href="#education" class="scroll-link">Education</a></li>
-                    <li><a href="#projects" class="scroll-link">Projects</a></li>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border border-bottom">
+            <div class="container"  style="max-width:1000px;">
+              <a class="navbar-brand link-dark d-none" href="#">Chris Bryan</a>
+              <button class="navbar-toggler toggler-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse align-left" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                    <a class="nav-link mx-2 active" aria-current="page" href="/">
+                        <i class="bi bi-house"></i>
+                        Home
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link mx-2" href="/research/">
+                        <i class="bi-speedometer"></i>
+                        Research
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link mx-2" href="/students/">
+                        <i class="bi-person-square"></i>
+                        Students
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link mx-2" href="/publications/">
+                        <i class="bi-stack"></i>
+                        Publications
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link mx-2" href="/teaching/">
+                        <i class="fa fa-mortar-board" aria-hidden="true"></i>
+                        Teaching
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link mx-2" href="/service/">
+                        <i class="bi-upc-scan"></i>
+                        Service
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link mx-2" href="mailto:cbryan16@asu.edu">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        Contact
+                    </a>
+                  </li>
                 </ul>
-                <div class="menu-toggle">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </nav>
-        </div>
+              </div>
+            </div>
+        </nav>
     </header>
+            
+    <main class="flex-shrink-1">
+        <div class="container" style="max-width:1000px;">
+            <div class="row">
 
-    <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>Hello! I am an MSCS student at ASU. I am passionate about software development and always eager to learn new technologies. This is my portfolio showcasing my skills, experiences, and projects.</p>
-        </div>
-    </section>
-
-    <section id="experience">
-        <div class="container">
-            <h2>Work Experience</h2>
-            <div class="experience">
-                <h3>Job Title 1</h3>
-                <p>Company Name, Location</p>
-                <p>From Date - To Date</p>
-                <ul>
-                    <li>Responsibility 1</li>
-                    <li>Responsibility 2</li>
-                    <li>Responsibility 3</li>
-                </ul>
-            </div>
-            <div class="experience">
-                <h3>Job Title 2</h3>
-                <p>Company Name, Location</p>
-                <p>From Date - To Date</p>
-                <ul>
-                    <li>Responsibility 1</li>
-                    <li>Responsibility 2</li>
-                    <li>Responsibility 3</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="education">
-        <div class="container">
-            <h2>Education</h2>
-            <div class="education">
-                <h3>Master of Science in Computer Science</h3>
-                <p>Arizona State University</p>
-                <p>From Date - To Date</p>
-            </div>
-            <div class="education">
-                <h3>Bachelor of Science in Computer Science</h3>
-                <p>University Name</p>
-                <p>From Date - To Date</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="project-card">
-                <div class="project-content">
-                    <h3>Project Title 1</h3>
-                    <p>Description of project 1</p>
+                <div class="col-md-2 col-sm-3 col-xs-3 mt-4">
+                    <img class="rounded shadow img-fluid" src="/assets/img_people/profile.png" data-holder-rendered="true">
                 </div>
-            </div>
-            <div class="project-card">
-                <div class="project-content">
-                    <h3>Project Title 2</h3>
-                    <p>Description of project 2</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 My Portfolio. All rights reserved.</p>
-        </div>
+                <div class="col-md-10 col-sm-9 col-xs-6 mt-2 pt-3">
+                    <!-- <hr> -->
+                    <h1>Chris Bryan</h1>
+                    <p class="lead">
+                        Assistant Professor in Computer Science<br>
+                        School of Computing and Augmented Intelligence<br>
+                        Arizona State University<br>
+                        Head of the Sonoran Visualization Laboratory (SVL @ ASU)
+                    </p>
+                    
+                </div>
+                
+            </div>
+
+            <hr>
+
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="/research/" class="link-danger">For researchers and businesses interested in collaborating, see the Research page.</a></li>
+                <li><a href="/policies/" class="link-danger">Are you a student interested in Vis research? Read the Lab Policies page first!</a></li>
+                <li><a href="/assets/cv/chris-bryan-june-2023.pdf" target="_blank" class="link-danger">CV</a> (last updated June 2023)</li>
+            </ul>
+
+            <h2>About</h2>
+
+            <p>
+                I am an Assistant Professor in the School of Computing and Augmented Intelligence at Arizona State University, which is located in the Ira A. Fulton Schools of Engineering at Arizona State University. I lead the Sonoran Visualization Laboratory (SVL @ ASU). I am also an affiliate faculty with ASU's Global Security Initiative. I received my Ph.D. at the University of California, Davis as a part of the <a href="https://vidi.cs.ucdavis.edu/" target="_blank" class="link-danger">VIDi lab</a>.
+            </p>
+
+            <p>
+                My research spans the areas of data visualization, human-computer interaction, augmented and virtual reality, and data science. Broadly, I develop novel algorithms, models, techniques, and interaces that help humans make sense of data. My research group regularly works with complex and real-world data, and develops advanced interactive visual analytics and data pipelines, including exploring advanced data in new ways, modeling and interpreting machine learning and artificial intelligence, and explaining or storytelling with data. See the <a href="/research/" class="link-danger">Research</a> page for more details, and the <a href="/research/" class="link-danger">Publications</a> page for our group's published papers.
+            </p>
+            <h5>External links</h5> 
+            <ul>
+                <li><a href='https://isearch.asu.edu/profile/3335256' class='link-danger' target='_blank'>iSearch</a> (my ASU directory profile)</li>
+                <li><a href="https://asu.pure.elsevier.com/en/persons/chris-bryan" class="link-danger" target="_blank">experts.asu</a> (my ASU expertise database fingerprint)</li>
+                <li><a href='https://scholar.google.com/citations?user=Y73FwSkAAAAJ' class='link-danger' target='_blank'>Google Scholar</a></li>
+                <li><a href='https://dblp.uni-trier.de/pid/139/2338.html' class='link-danger' target='_blank'>DBLP</a></li>
+                <li><a href='https://www.linkedin.com/in/chris-bryan-990ba13b/' class='link-danger' target='_blank'>LinkedIn</a></li>
+                <li><a href='https://twitter.com/chrisBryanASU' class='link-danger' target='_blank'>Twitter</a> (rarely updated...)</li>
+                <li><a href='https://www.instagram.com/chrisbryanasu/' class='link-danger' target='_blank'>Instagram</a> (even more rarely updated...)</li>
+            </ul>
+
+            <hr>
+            <h2>Recent News</h2>
+            <div class="mb-5">
+
+                <h5>August 2023</h5>
+                <p class="mx-2">Michael's paper <b>Comparing Collaborative Visualization Behaviors in Desktop and Augmented Reality Environments</b> has been accepted to <a href="https://vrst.acm.org/vrst2023/" target="_blank" class="link-danger">ACM VRST 2023</a>. We explored how two-person teams (aka, dyads) communicate and interact when using Hololenses to analyze 3D visualizations in augmented reality.</p>
+
+                <h5>July 2023</h5>
+                <p class="mx-2">Anjana's paper <b>Image or Information? Examining the Nature and Impact of Visualization Perceptual Classification</b> has been accepted to <a href="https://ieeevis.org/year/2023/welcome" target="_blank" class="link-danger">IEEE VIS 2023</a>. This project explores how we cognitively internalize data visualizations: as <i>images</i>, or as <i>information</i>? We created a dataset of 500 annotated visualizations and then conducted a pair of large-scale experiments to investigate the nature of such internalization and explore how memory encoding affects it retrieval. This work was done in collaboration with fellow ASU professor <a class="link-danger" href="https://psychology.asu.edu/research/labs/visual-cognitive-neuroscience-lab" target="_blank">Gi-Yeul Bae</a> and Northeastern professor <a class="link-danger" href="http://www.lacepadilla.com/" target="_blank">Lace Padilla</a>.</p>
+                
+                <h5>June 2023</h5>
+                <p class="mx-2">Congrats to Anjana, Aditi, and Jinbin on passing their comprehensive exams and dissertation proposals this spring! 🎉 &nbsp;🎉 &nbsp;🎉 Lots of good work going on in the SVL right now!</p>
+                <p class="mx-2">I have been received a "2023 Top Five Percent Faculty at the Ira A. Fulton Schools of Engineering" award. </p>
+
+                <h5>April 2023</h5>
+                <p class="mx-2">Anjana and Shubham's paper <b>LINGO: Visually Debiasing Natural Language Instructions to Support Task Diversity</b> has been accepted to <a href="https://www.eurovis.org/" target="_blank" class="link-danger">EuroVis 2023</a>! LINGO is a novel visual analytics interface that supports an effective, task-driven workflow to help identify bias in natural language task instructions, alter (or create) task instructions to reduce bias, and evaluate pre-trained model performance on debiased task instructions.</p>
+
+                <h5>February 2023</h5>
+                <p class="mx-2">Anjana's paper <b>Real-Time Visual Feedback to Guide Benchmark Creation: A Human-and-Metric-in-the-Loop Workflow</b> has been accepted to <a href="https://2023.eacl.org/" target="_blank" class="link-danger">EACL 2023</a>! This paper introduces an pair of human-in-the-loop techniques/interfaces supporting an analyst moderating crowdworker responses for benchmark dataset creation tasks.</p>
+                
+                <h5>December 2022</h5>
+                <p class="mx-2">I have joined the Steering Committee for the IEEE Symposium on Visualization for Cyber Security (VizSec). 🔐 &nbsp;📊 &nbsp;⚖️</p>
+                <p class="mx-2">Jose and Shubham both passed their M.S. defenses and submitted their theses. Congrats guys! 🎉 &nbsp;🎉 &nbsp;🎉</p>
+
+                <h5>October 2022</h5>
+                <p class="mx-2">I have been awarded an NSF SaTC grant to explore methods for creating "privacy-aware visualizations." <strong>NSF #2224066: Effective Design and Recommendation for Privacy-Preserving Data Visualizations</strong> (<a class="link-danger" href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2224066&HistoricalAwards=false" target="_blank">link</a>).</p>
+
+                <h5>September 2022</h5>
+                <p class="mx-2">A paper by SVL student Jinbin Huang has been accepted to the Visual Analytics in Immersive Environments (VAinIE) Workshop at ISMAR 2022. <strong>SPARVIS: Combining Smartphone and Augmented Reality for Visual Data Analytics</strong> develops a framework and demo tool that uses a smartphone as an input and interaction device when visualizing data in augmented reality headsets.</p>
+
+                <h5>August 2022</h5>
+                <p class="mx-2">We have two full papers accepted to this year's IEEE VIS conference. <strong>ConceptExplainer: Understanding the Mental Model of Deep Learning Algorithms via Interactive Concept-based Explanations</strong>, led by Jinbin Huang, is a visual analytics sytem for non-expert AI users to explore the behavior of image classification models using concept-based explanations. <strong>PMU Tracker: A Visualization Platform for Egocentric Event Propagation Analysis in the Power Grid</strong>, led by Anjana Arunkumar, develops a novel dendrogram-based visualization technique for analyzing topological network data.</p> 
+
+                <h5>July 2022</h5>
+                <p class="mx-2">Here is <a class="link-danger" href="https://news.asu.edu/20220627-interplanetary-initiative-announces-new-and-renewed-projects-academic-year" target="_blank">an article</a> about a pilot project (called <strong>Space Activity Heat Map</strong>) that we'll be workong on over the next year with ASU's Interplanetary Initiative. 🚀&nbsp;🪐&nbsp;🛰</p>
+
+                <h5>June 2022</h5>
+                <p class="mx-2">We are very excited to be awarded an NSF IUSE grant to investigate ways to improve visualiation education: <strong>NSF #2216452: Developing and Evaluating a Classroom Orchestration Toolkit for Visualization Education</strong> (<a class="link-danger" href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2216452" target="_blank">link</a>).</p>
+
+                <h5>April 2022</h5>
+                <p class="mx-2">Our paper <b>PMUVis: A Large Scale Platform to Assist Power System Operators in a Smart Grid</b> has been published in IEEE Computer Graphics & Applications (<a href="https://ieeexplore.ieee.org/abstract/document/9765704" class="link-danger" target="_blank">link</a>), led by SVL researcher Anjana Arunkumar. We worked with power grid engineers to design a visualization interface supporting the analysis of synchrophasar data.</p>
+
+                <h5>March 2022</h5>
+                <p class="mx-2">SVL researcher Aditi Mishra was awarded a SCAI Doctoral Fellowship, in recognition of her excellent work as an ASU graduate student. 🎉&nbsp;Congrats, Aditi!&nbsp;🎉 </p>
+                
+                <h5>February 2022</h5>
+                <p class="mx-2">We have two papers that have been accepted into this year's IEEE PacificVis, both led by SVL researcher Aditi Mishra: <strong>News Kaleidoscope: Visual Investigation of Coverage Diversity in News Event Reporting</strong>, and <strong>Why? Why not? When? Visual Explanations of Agent Behaviour in Reinforcement Learning</strong>.</p>
+
+                <h5>January 2022</h5>
+                <p class="mx-2">I will be the general chair for this year's IEEE Symposium on Visualization for Cyber Security (<a href="https://vizsec.org/vizsec2022/" class="link-danger" target="_blank">https://vizsec.org/vizsec2022/</a>), co-located with the IEEE VIS 2022 conference.</p>
+
+                <h5>September 2021</h5>
+                <p class="mx-2">Our paper <strong>ChartStory: Automated Partitioning, Layout, and Captioning of Charts into Comic-Style Narratives</strong> has been published in IEEE Transactions on Visualization and Computer Graphics (<a href="https://ieeexplore.ieee.org/document/9547737" target="_blank" class="link-danger">link</a>)!</p>
+
+                <h5>August 2021</h5>
+                <p class="mx-2">We have two papers that will be presented at this year's IEEE VIS conference. <strong>Bayesian Modelling of Alluvial Diagram Complexity</strong> is a VIS short paper based on Shashank Ginjpalli's Barrett thesis, and <strong>Phoenix Virtual Heart: A Hybrid VR-Desktop Visualization System for Cardiac Surgery Planning and Education</strong>, led by Jinbin Huang, in a collaboration with several medical researchers and clinicians at Phoenix Children's Hospital, will be presented at the co-located IEEE Workshop on Visual Analytics in Healthcare (VAHC).</p>
+                
+                <h5>February 2021</h5>
+                <p class="mx-2">Excited to welcome the <a href="#feb-2022-modal" data-bs-toggle="modal" data-bs-target="#feb-2022-modal" class="link-danger">newest research assistant</a> to the SVL @ ASU! 👶🏼 &nbsp;🍼 </p>
+
+                <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Launch demo modal
+                  </button> -->
+
+                <!-- Modal -->
+                <div class="modal fade" id="feb-2022-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <!-- <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div> -->
+                        <div class="modal-body mb-2 p-2">
+                            <img class="rounded shadow img-fluid" src="/assets/img_people/arin_feb2022.png" data-holder-rendered="true">
+                        </div>
+                        <div class="modal-footer">
+                            <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div> <!-- end container -->
+    </main>
+
+    <footer class="footer mt-auto py-3 bg-light border border-top" id="footer">
+        <script>
+            $(function() {
+                $("#footer").load("/assets/html/footer.html");
+            });
+        </script>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
-    <script src="scripts.js"></script>
-</body>
+
+
+
+
+
+
+    </body>
 </html>
