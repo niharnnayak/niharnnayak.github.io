@@ -1,9 +1,11 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    background-color: #f4f4f9;
+    color: #333;
 }
 
 header {
@@ -28,6 +30,7 @@ header .container {
 
 header h1 {
     margin: 0;
+    font-size: 1.5em;
 }
 
 header nav ul {
@@ -73,7 +76,8 @@ section .container {
 h2 {
     margin-bottom: 20px;
     color: #333;
-    font-size: 2em;
+    font-size: 2.5em;
+    text-align: center;
 }
 
 p {
@@ -81,21 +85,44 @@ p {
     color: #666;
 }
 
-.experience, .education, .project {
-    margin-bottom: 20px;
+.experience, .education {
+    margin-bottom: 40px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.experience h3, .education h3, .project h3 {
+.experience h3, .education h3 {
     margin: 0;
     color: #333;
     font-size: 1.5em;
+}
+
+.project-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-content h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
 }
 
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
 }
 
 footer p {
@@ -115,16 +142,8 @@ footer p {
     .menu-toggle {
         display: block;
     }
-}
 
-/* Project cards animations */
-.project {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease-in-out;
-}
-
-.project.visible {
-    opacity: 1;
-    transform: translateY(0);
+    h2 {
+        font-size: 2em;
+    }
 }

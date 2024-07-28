@@ -20,7 +20,7 @@ menuToggle.addEventListener('click', () => {
 });
 
 // Animate project cards on scroll
-const projects = document.querySelectorAll('.project');
+const projects = document.querySelectorAll('.project-card');
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
