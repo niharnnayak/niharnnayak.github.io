@@ -27,7 +27,7 @@
     to bottom right, 
     hsl(240, 1%, 25%) 3%, 
     hsl(0, 0%, 19%) 97%
-  );
+  ); 
   --bg-gradient-jet: linear-gradient(
     to bottom right, 
     hsla(240, 1%, 18%, 0.251) 0%, 
@@ -314,6 +314,7 @@ main {
   #SIDEBAR
 \*-----------------------------------*/
 
+/* Sidebar container styling */
 .sidebar {
   margin-bottom: 15px;
   max-height: 112px;
@@ -321,8 +322,10 @@ main {
   transition: var(--transition-2);
 }
 
+/* Expand sidebar when active */
 .sidebar.active { max-height: 405px; }
 
+/* Sidebar info styling */
 .sidebar-info {
   position: relative;
   display: flex;
@@ -336,6 +339,7 @@ main {
   border-radius: 20px;
 }
 
+/* Sidebar name styling */
 .info-content .name {
   color: var(--white-2);
   font-size: var(--fs-3);
@@ -344,7 +348,42 @@ main {
   margin-bottom: 10px;
 }
 
-.info-content .title {
+/* Title container styling */
+.title-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers items horizontally */
+  justify-content: center; /* Centers items vertically (if needed) */
+  width: 100%; /* Ensures full width for centering */
+  height: auto; /* Adjust based on your layout */
+}
+
+/* Title container styling with some centering adjustments */
+.title-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers items horizontally */
+  justify-content: center; /* Centers items vertically (if needed) */
+  text-align: center; /* Ensures text inside is centered */
+}
+
+/* Title styling */
+/* Title container styling */
+.title-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers items horizontally */
+  justify-content: center; /* Centers items vertically */
+  width: 100%; /* Ensures full width for centering */
+  height: auto; /* Adjust based on your layout */
+  text-align: center; /* Ensures text inside is centered */
+}
+
+/* Title styling */
+.title-container p.title {
   color: var(--white-1);
   background: var(--onyx);
   font-size: var(--fs-8);
@@ -352,8 +391,32 @@ main {
   width: max-content;
   padding: 3px 12px;
   border-radius: 8px;
+  margin: 10px 0; /* Margin to separate from other titles */
 }
 
+/* Dynamic titles styling */
+.dynamic-title {
+  color: var(--light-gray);
+  font-size: var(--fs-8);
+  font-weight: var(--fw-300);
+  margin: 0;
+  opacity: 0;
+  position: absolute; /* Keeps titles in the same spot */
+  top: 50%; /* Centers vertically */
+  left: 50%; /* Centers horizontally */
+  transform: translate(-50%, -50%); /* Centers the text itself */
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  text-align: center; /* Ensures text inside is centered */
+}
+
+/* Animation for active title */
+.title-container .active {
+  opacity: 1;
+  transform: translate(-50%, -50%) translateY(0); /* Centers and animates */
+}
+
+
+/* Button styling */
 .info_more-btn {
   position: absolute;
   top: -15px;
@@ -386,6 +449,7 @@ main {
 
 .info_more-btn span { display: none; }
 
+/* Sidebar additional info styling */
 .sidebar-info_more {
   opacity: 0;
   visibility: hidden;
@@ -397,6 +461,7 @@ main {
   visibility: visible;
 }
 
+/* Contacts list styling */
 .contacts-list {
   display: grid;
   grid-template-columns: 1fr;
@@ -429,6 +494,7 @@ main {
 
 .contact-info address { font-style: normal; }
 
+/* Social list styling */
 .social-list {
   display: flex;
   justify-content: flex-start;
@@ -443,11 +509,7 @@ main {
   font-size: 18px;
 }
 
-
 .social-item .social-link:hover { color: var(--light-gray); }
-
-
-
 
 
 /*-----------------------------------*\
@@ -726,7 +788,9 @@ main {
  * #clients 
  */
 
-.clients { margin-bottom: 15px; }
+ .clients {
+  margin-bottom: 15px;
+}
 
 .clients-list {
   display: flex;
@@ -746,15 +810,24 @@ main {
 .clients-item {
   min-width: 50%;
   scroll-snap-align: start;
+  text-align: center; /* Center-align the text */
 }
 
 .clients-item img {
   width: 100%;
   filter: grayscale(1);
   transition: var(--transition-1);
+  margin-bottom: 5px; /* Add some space between the image and the caption */
 }
 
-.clients-item img:hover { filter: grayscale(0); }
+.clients-item img:hover {
+  filter: grayscale(0);
+}
+
+.certificate-caption {
+  font-size: 0.9em; /* Adjust the font size as needed */
+  color: #555; /* Adjust the color as needed */
+}
 
 
 
@@ -830,45 +903,59 @@ main {
 }
 
 
+/* Skills and Technologies Section */
+
 /**
- * skills 
+ * #skills & #technologies 
  */
 
-.skills-title { margin-bottom: 20px; }
+ .skills-title, .technologies-title {
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
 
-.skills-list { padding: 20px; }
-
-
-.skills-item:not(:last-child) { margin-bottom: 15px; }
-
-.skill .title-wrapper {
+.skills-list, .technologies-list {
   display: flex;
-  align-items: center;
-  gap: 5px;
-  margin-bottom: 8px;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
 }
 
-.skill .title-wrapper data {
-  color: var(--light-gray);
-  font-size: var(--fs-7);
-  font-weight: var(--fw-300);
-}
-
-.skill-progress-bg {
+.skills-item, .technologies-item {
   background: var(--jet);
-  width: 100%;
-  height: 8px;
-  border-radius: 10px;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: var(--shadow-2);
+  width: 200px; /* Adjust width as needed */
+  text-align: center;
+  color: var(--light-gray);
 }
 
-.skill-progress-fill {
-  background: var(--text-gradient-yellow);
-  height: 100%;
+.skills-item::before, .technologies-item::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--bg-gradient-jet);
   border-radius: inherit;
+  z-index: -1;
 }
 
+.skills-content-box, .technologies-content-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.skills-item-title, .technologies-item-title {
+  margin-bottom: 10px;
+  font-size: var(--fs-5);
+}
 
+.skills-item-text, .technologies-item-text {
+  font-size: var(--fs-6);
+  font-weight: var(--fw-3);
+  line-height: 1.6;
+}
 
 
 /*-----------------------------------*\
@@ -1113,14 +1200,102 @@ main {
   font-weight: var(--fw-300);
   line-height: 1.6;
 }
+/*-----------------------------------*\
+  #RESUME BUTTON
+\*-----------------------------------*/
 
+.resume-btn-wrapper {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-resume {
+  display: inline-flex;
+  align-items: center;
+  background: var(--orange-yellow-crayola);
+  color: var(--eerie-black-2);
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: var(--fs-5);
+  font-weight: var(--fw-400);
+  transition: background 0.3s ease;
+}
+
+.btn-resume:hover {
+  background: var(--light-gray-70);
+}
+
+.btn-resume ion-icon {
+  font-size: 20px;
+  margin-right: 8px;
+}
 
 
 
 
 /*-----------------------------------*\
-  #CONTACT
+  #CONTACT CARD
 \*-----------------------------------*/
+
+.contactp-card {
+  background: var(--eerie-black-2);
+  padding: 20px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contactp-title {
+  color: var(--white-2);
+  font-size: var(--fs-4);
+  font-weight: var(--fw-500);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contactp-details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contactp-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--jet);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.contactp-icon {
+  font-size: 24px;
+  color: var(--orange-yellow-crayola);
+}
+
+.contactp-text {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+}
+
+.contactp-item a {
+  color: var(--light-gray);
+  text-decoration: none;
+}
+
+.contactp-item a:hover {
+  text-decoration: underline;
+}
+
+.form-title {
+  color: var(--white-2);
+  font-size: var(--fs-5);
+  font-weight: var(--fw-400);
+  margin-bottom: 20px;
+}
 
 .mapbox {
   position: relative;
@@ -1141,7 +1316,7 @@ main {
   filter: grayscale(1) invert(1);
 }
 
-.contact-form { margin-bottom: 10px; }
+.contactp-form { margin-bottom: 10px; }
 
 .form-title { margin-bottom: 20px; }
 
