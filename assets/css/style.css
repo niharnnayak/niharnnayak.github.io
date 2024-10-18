@@ -23,6 +23,14 @@
 
   /* gradient */
 
+  .project-img img {
+    width: 100%;
+    height: 200px; /* Set the desired height */
+    object-fit: cover; /* Maintain aspect ratio, cropping if necessary */
+    border-radius: 8px; /* Optional: add rounded corners */
+  }
+  
+
   --bg-gradient-onyx: linear-gradient(
     to bottom right, 
     hsl(240, 1%, 25%) 3%, 
